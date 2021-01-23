@@ -3,8 +3,8 @@
 #include <unistd.h>
 
 #include <cctype>
-#include <sstream>
 #include <iomanip>
+#include <sstream>
 #include <string>
 #include <vector>
 
@@ -35,9 +35,9 @@ float Process::CpuUtilization() const { return cpu_utilization_; }
 string Process::Command() const { return command_; }
 
 // TODO: Return this process's memory utilization
-string Process::Ram() const { 
-  std::stringstream stream; 
-  stream << std::fixed << std::setprecision(2) << ram_; 
+string Process::Ram() const {
+  std::stringstream stream;
+  stream << std::fixed << std::setprecision(2) << ram_;
   return stream.str();
 }
 

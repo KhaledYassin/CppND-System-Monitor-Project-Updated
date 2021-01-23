@@ -21,12 +21,12 @@ class Process : public SystemProperty {
   static const std::string kProcCstime;
   static const std::string kProcStarttime;
 
-  int Pid() const;                               // TODO: See src/process.cpp
-  std::string User() const;                      // TODO: See src/process.cpp
-  std::string Command() const;                   // TODO: See src/process.cpp
-  float CpuUtilization() const;                  // TODO: See src/process.cpp
-  std::string Ram() const;                       // TODO: See src/process.cpp
-  long int UpTime() const;                       // TODO: See src/process.cpp
+  int Pid() const;                         // TODO: See src/process.cpp
+  std::string User() const;                // TODO: See src/process.cpp
+  std::string Command() const;             // TODO: See src/process.cpp
+  float CpuUtilization() const;            // TODO: See src/process.cpp
+  std::string Ram() const;                 // TODO: See src/process.cpp
+  long int UpTime() const;                 // TODO: See src/process.cpp
   bool operator<(Process const& a) const;  // TODO: See src/process.cpp
   void UpdateStatistics() override;
   void SetSystemUptime(long system_uptime);

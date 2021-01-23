@@ -1,7 +1,7 @@
 #ifndef STATISTIC_H
 #define STATISTIC_H
 
-#include<string>
+#include <string>
 
 #include "field.h"
 
@@ -10,7 +10,7 @@ class Statistic : public Field<double> {
   Statistic(std::string name, double value, std::string unit);
 
  private:
- std::string unit_; 
+  std::string unit_;
 };
 
 #endif
