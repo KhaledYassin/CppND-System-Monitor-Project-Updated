@@ -5,7 +5,13 @@
 #include <regex>
 #include <string>
 
+#include "system.h"
+#include "system_memory.h"
+#include "cpu.h"
+#include "operating_system.h"
+
 namespace LinuxParser {
+
 // Paths
 const std::string kProcDirectory{"/proc/"};
 const std::string kCmdlineFilename{"/cmdline"};
@@ -19,12 +25,19 @@ const std::string kOSPath{"/etc/os-release"};
 const std::string kPasswordPath{"/etc/passwd"};
 
 // System
+void UpdateSystemMemory(SystemMemory& memory);
+void UpdateCPU(CPU& cpu);
+void UpdateOperatingSystem(OperatingSystem& os);
+void UpdateProcess(int Pid, Process& process);
+void UpdateSystemUptime(System& system);
+
 float MemoryUtilization();
 long UpTime();
 std::vector<int> Pids();
+
 int TotalProcesses();
 int RunningProcesses();
-std::string OperatingSystem();
+std::string GetOsPrettyName();
 std::string Kernel();
 
 // CPU
@@ -40,6 +53,7 @@ enum CPUStates {
   kGuest_,
   kGuestNice_
 };
+
 std::vector<std::string> CpuUtilization();
 long Jiffies();
 long ActiveJiffies();

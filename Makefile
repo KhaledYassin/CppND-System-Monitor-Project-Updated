@@ -13,7 +13,7 @@ build:
 	make
 
 .PHONY: debug
-debug:
+debug:	
 	mkdir -p build
 	cd build && \
 	cmake -DCMAKE_BUILD_TYPE=debug .. && \
