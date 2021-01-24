@@ -5,7 +5,6 @@
 
 #include <algorithm>
 #include <cctype>
-#include <filesystem>
 #include <iostream>
 #include <map>
 #include <string>
